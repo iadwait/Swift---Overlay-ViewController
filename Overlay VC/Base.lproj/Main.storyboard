@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Overlay_VC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="98"/>
+        </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="Tyd-kV-6SO">
+            <objects>
+                <viewController storyboardIdentifier="MapsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TGZ-Ok-vSf" customClass="MapsViewController" customModule="Overlay_VC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zem-Ps-Kyh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k1b-xK-TjQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k1b-xK-TjQ" firstAttribute="top" secondItem="1Rg-sN-var" secondAttribute="top" id="9Gp-e5-KOp"/>
+                            <constraint firstItem="1Rg-sN-var" firstAttribute="bottom" secondItem="k1b-xK-TjQ" secondAttribute="bottom" id="L4L-5q-0Ic"/>
+                            <constraint firstItem="1Rg-sN-var" firstAttribute="trailing" secondItem="k1b-xK-TjQ" secondAttribute="trailing" id="WwH-sF-JF5"/>
+                            <constraint firstItem="k1b-xK-TjQ" firstAttribute="leading" secondItem="1Rg-sN-var" secondAttribute="leading" id="Yk9-XL-goo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Rg-sN-var"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="k1b-xK-TjQ" id="KBQ-u3-4ex"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1m-J8-E2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-216" y="813"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="cq6-HK-qbW">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xtr-nN-KSF" customClass="DetailsViewController" customModule="Overlay_VC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KID-0f-4jd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jj4-Zy-iah">
+                                <rect key="frame" x="20" y="54" width="374" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r9J-i4-c3H" firstAttribute="trailing" secondItem="jj4-Zy-iah" secondAttribute="trailing" constant="20" id="2TD-qf-r8L"/>
+                            <constraint firstItem="jj4-Zy-iah" firstAttribute="top" secondItem="r9J-i4-c3H" secondAttribute="top" constant="10" id="WCG-9a-zYE"/>
+                            <constraint firstItem="jj4-Zy-iah" firstAttribute="leading" secondItem="r9J-i4-c3H" secondAttribute="leading" constant="20" id="n4a-5x-7rL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r9J-i4-c3H"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblLocationDescription" destination="jj4-Zy-iah" id="pp5-Lb-VnF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQu-Z2-5w5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="813"/>
+        </scene>
+    </scenes>
+</document>
